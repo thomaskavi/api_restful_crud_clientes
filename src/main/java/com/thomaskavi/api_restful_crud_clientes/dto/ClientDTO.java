@@ -33,9 +33,9 @@ public class ClientDTO {
   @Positive(message = "Renda deve ser positivo")
   private Double income;
 
-  @PastOrPresent(message = "A data de nascimento deve estar no passado ou ser hoje. Formato esperado: dd/MM/yyyy")
-  @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd/MM/yyyy")
-  private LocalDate birhDate;
+  @PastOrPresent(message = "A data de nascimento deve estar no passado ou ser hoje. Formato esperado: yyyy/MM/dd")
+  @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+  private LocalDate birthDate;
 
   @PositiveOrZero(message = "A quantidade de filhos não pode ser menor do que 0")
   private Integer children;
@@ -45,7 +45,7 @@ public class ClientDTO {
     name = entity.getName();
     cpf = entity.getCpf();
     income = entity.getIncome();
-    birhDate = entity.getBirhDate();
+    birthDate = entity.getBirthDate();
     children = entity.getChildren();
   }
 
