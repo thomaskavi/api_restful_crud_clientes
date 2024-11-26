@@ -6,8 +6,4 @@ public class MethodArgumentNotValidException extends RuntimeException {
     super(msg);
   }
 
-  public Object getBindingResult() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getBindingResult'");
-  }
 }

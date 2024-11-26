@@ -27,13 +27,13 @@ public class ClientDTO {
   @NotBlank(message = "Nome é obrigatório")
   private String name;
 
-  @Size(min = 11, message = "CPF inválido. Informe apenas números")
+  @Size(min = 11, max = 11, message = "CPF deve ter apenas 11 dígitos. Informe apenas números")
   private String cpf;
 
   @Positive(message = "Renda deve ser positivo")
   private Double income;
 
-  @PastOrPresent(message = "A data de nascimento deve estar no passado ou ser hoje. Formato esperado: yyyy/MM/dd")
+  @PastOrPresent(message = "A data de nascimento deve estar no passado ou ser hoje. Formato esperado: yyyy-MM-dd")
   @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
   private LocalDate birthDate;
 
